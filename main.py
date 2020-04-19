@@ -2,15 +2,12 @@ import torch
 import pickle
 import torch.nn as nn
 import torch.optim as optim
-from mnist_gan.utility import plot
-from mnist_gan.loggers import Loggers
+from loggers import Loggers
+from load_data import load_data
+from train import train_gen, train_disc
 from time import time, gmtime, strftime
-from mnist_gan.utility import create_gif
-from mnist_gan.load_data import load_data
-from mnist_gan.utility import save_results
-from mnist_gan.utility import save_checkpoint
-from mnist_gan.train import train_gen, train_disc
-from mnist_gan.model import Generator, Discriminator
+from model import Generator, Discriminator
+from utility import create_gif, save_results, save_checkpoint, plot
 
 
 def train_gan(gen, disc, gen_opt, disc_opt, criterion, device, epoch, train_loader):
