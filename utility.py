@@ -3,9 +3,9 @@ import torch
 import pickle
 import imageio
 import itertools
+from loggers import Loggers
 import matplotlib.pyplot as plt
 from torch.autograd import Variable
-from mnist_gan.loggers import Loggers
 
 
 # helper function for viewing a list of passed in sample images
